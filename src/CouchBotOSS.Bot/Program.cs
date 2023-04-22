@@ -1,6 +1,6 @@
 using CouchBotOSS.Bot.Services.Bot;
 using CouchBotOSS.Bot.Services.Hosted;
-using CouchBotOSS.Shared.Models;
+using CouchBotOSS.Shared.Models.Bot;
 using Discord;
 using Discord.Interactions;
 using Discord.WebSocket;

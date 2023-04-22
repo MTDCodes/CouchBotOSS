@@ -1,9 +1,14 @@
-using CouchBotOSS.Dalton;
+using CouchBotOSS.Dalton.Models;
+using CouchBotOSS.Dalton.Services.Hosted;
+using CouchBotOSS.Shared.Models.Bot;
 
 IHost host = Host.CreateDefaultBuilder(args)
-    .ConfigureServices(services =>
+    .ConfigureServices((context, services) =>
     {
-        services.AddHostedService<Worker>();
+        services.Configure<PatreonConfiguration>(context.Configuration.GetSection(nameof(PatreonConfiguration)));
+        services.Configure<TimerConfiguration>(context.Configuration.GetSection(nameof(TimerConfiguration)));
+        services.AddMemoryCache();
+        services.AddHostedService<PatreonWorker>();
     })
     .Build();
 

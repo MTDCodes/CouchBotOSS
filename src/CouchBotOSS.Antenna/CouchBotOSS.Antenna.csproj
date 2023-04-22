@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>dotnet-CouchBotOSS.Antenna-1994f2ab-d587-45b6-8a2d-50542d4299fc</UserSecretsId>
   </PropertyGroup>

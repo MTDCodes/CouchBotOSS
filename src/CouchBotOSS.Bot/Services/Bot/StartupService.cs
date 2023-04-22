@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using CouchBotOSS.Shared.Models;
+using CouchBotOSS.Shared.Models.Bot;
 using Discord;
 using Discord.Commands;
 using Discord.Interactions;

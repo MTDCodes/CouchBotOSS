@@ -1,4 +1,4 @@
-﻿namespace CouchBotOSS.Shared.Models;
+﻿namespace CouchBotOSS.Shared.Models.Bot;
 
 public class TokenConfiguration
 {
