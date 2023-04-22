@@ -3,9 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33402.96
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouchBotOSS.Bot", "src\CouchBotOSS.Bot\CouchBotOSS.Bot.csproj", "{68E702EB-6FE4-4CF6-ABCE-B94146EFDF9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CouchBotOSS.Bot", "src\CouchBotOSS.Bot\CouchBotOSS.Bot.csproj", "{68E702EB-6FE4-4CF6-ABCE-B94146EFDF9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouchBotOSS.Shared", "src\CouchBotOSS.Shared\CouchBotOSS.Shared.csproj", "{898E2349-677A-4716-AB37-B94CFBA8A80B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CouchBotOSS.Shared", "src\CouchBotOSS.Shared\CouchBotOSS.Shared.csproj", "{898E2349-677A-4716-AB37-B94CFBA8A80B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouchBotOSS.Antenna", "src\CouchBotOSS.Antenna\CouchBotOSS.Antenna.csproj", "{300892B8-29F3-4CDE-B449-1E457CF88123}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouchBotOSS.Accessors", "src\CouchBotOSS.Accessors\CouchBotOSS.Accessors.csproj", "{B795283A-7093-404A-A03C-60B0DEB667B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Main Services", "Main Services", "{CB8AAB5C-FFF6-471B-8866-88009021323F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Supporting Libraries", "Supporting Libraries", "{DE800E68-FDE2-4AB9-87E2-14F18CD9BD16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouchBotOSS.Dalton", "src\CouchBotOSS.Dalton\CouchBotOSS.Dalton.csproj", "{7B730AAC-F09C-4C74-8D29-E9ACA95929B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +31,28 @@ Global
 		{898E2349-677A-4716-AB37-B94CFBA8A80B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{898E2349-677A-4716-AB37-B94CFBA8A80B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{898E2349-677A-4716-AB37-B94CFBA8A80B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{300892B8-29F3-4CDE-B449-1E457CF88123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{300892B8-29F3-4CDE-B449-1E457CF88123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{300892B8-29F3-4CDE-B449-1E457CF88123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{300892B8-29F3-4CDE-B449-1E457CF88123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B795283A-7093-404A-A03C-60B0DEB667B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B795283A-7093-404A-A03C-60B0DEB667B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B795283A-7093-404A-A03C-60B0DEB667B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B795283A-7093-404A-A03C-60B0DEB667B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B730AAC-F09C-4C74-8D29-E9ACA95929B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B730AAC-F09C-4C74-8D29-E9ACA95929B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B730AAC-F09C-4C74-8D29-E9ACA95929B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B730AAC-F09C-4C74-8D29-E9ACA95929B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{68E702EB-6FE4-4CF6-ABCE-B94146EFDF9D} = {CB8AAB5C-FFF6-471B-8866-88009021323F}
+		{898E2349-677A-4716-AB37-B94CFBA8A80B} = {DE800E68-FDE2-4AB9-87E2-14F18CD9BD16}
+		{300892B8-29F3-4CDE-B449-1E457CF88123} = {CB8AAB5C-FFF6-471B-8866-88009021323F}
+		{B795283A-7093-404A-A03C-60B0DEB667B1} = {DE800E68-FDE2-4AB9-87E2-14F18CD9BD16}
+		{7B730AAC-F09C-4C74-8D29-E9ACA95929B2} = {CB8AAB5C-FFF6-471B-8866-88009021323F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5288ED93-7B68-4156-A75B-1A88EC7062AF}

@@ -248,5 +248,4 @@ ModelManifest.xml
 *.db
 .vscode
 
-appsettings.json
-AppSettings.json
+appsettings*
