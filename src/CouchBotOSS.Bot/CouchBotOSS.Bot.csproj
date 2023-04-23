@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <Folder Include="Commands\Slash\" />
+    <Folder Include="Commands\Text\" />
   </ItemGroup>
 
   <ItemGroup>

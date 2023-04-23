@@ -2,7 +2,7 @@
 using CouchBotOSS.Data.Models;
 using CouchBotOSS.Shared.Dtos;
 
-namespace CouchBotOSS.Shared.Mapping
+namespace CouchBotOSS.Shared.Mapper
 {
     public class MappingProfile : Profile
     {

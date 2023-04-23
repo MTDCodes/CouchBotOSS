@@ -4,7 +4,6 @@ using CouchBotOSS.Shared.Models.Bot;
 using Discord;
 using Discord.Interactions;
 using Discord.WebSocket;
-using MTD.CouchBot.Services;
 
 var host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((context, services) =>
@@ -22,7 +21,7 @@ var host = Host.CreateDefaultBuilder(args)
                 GatewayIntents.GuildMembers |
                 GatewayIntents.GuildMessageReactions |
                 GatewayIntents.GuildPresences |
-                GatewayIntents.Guilds | 
+                GatewayIntents.Guilds |
                 GatewayIntents.MessageContent |
                 GatewayIntents.GuildMessages,
             LogLevel = LogSeverity.Warning,

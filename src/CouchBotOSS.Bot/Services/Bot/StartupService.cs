@@ -6,7 +6,7 @@ using Discord.Interactions;
 using Discord.WebSocket;
 using Microsoft.Extensions.Options;
 
-namespace MTD.CouchBot.Services;
+namespace CouchBotOSS.Bot.Services.Bot;
 
 public class StartupService
 {

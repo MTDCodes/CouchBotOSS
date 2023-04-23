@@ -1,11 +1,11 @@
-﻿using CouchBotOSS.Shared.Helpers;
+﻿using CouchBotOSS.Accessors.Contracts;
+using CouchBotOSS.Shared.Helpers;
 using CouchBotOSS.Shared.Models.Bot;
 using CouchBotOSS.Shared.Models.Patreon;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
-using MTD.CouchBot.Accessors.Contracts;
 
-namespace MTD.CouchBot.Accessors.Implementations;
+namespace CouchBotOSS.Accessors.Implementations;
 
 public class PatreonAccessor : IPatreonAccessor
 {

@@ -1,6 +1,6 @@
 ﻿using Discord.WebSocket;
 
-namespace MTD.CouchBot.Services;
+namespace CouchBotOSS.Bot.Services.Bot;
 
 public class GuildInteractionService
 {
