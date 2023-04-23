@@ -3,6 +3,7 @@ using CouchBotOSS.Accessors.Contracts;
 using CouchBotOSS.Data.Models;
 using CouchBotOSS.Shared.Dtos;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace CouchBotOSS.Accessors.Implementations
 {
@@ -10,12 +11,15 @@ namespace CouchBotOSS.Accessors.Implementations
     {
         private readonly CouchContext _couchContext;
         private readonly IMapper _mapper;
+        private readonly ILogger<DiscordUserAccessor> _logger;
 
-        public DiscordUserAccessor(CouchContext couchContext, 
-            IMapper mapper)
+        public DiscordUserAccessor(CouchContext couchContext,
+            IMapper mapper,
+            ILogger<DiscordUserAccessor> logger)
         {
             _couchContext = couchContext;
             _mapper = mapper;
+            _logger = logger;
         }
 
         public async Task<List<DiscordUserDto>> ListAsync()
@@ -29,24 +33,30 @@ namespace CouchBotOSS.Accessors.Implementations
         {
             var discordUser = await _couchContext.DiscordUsers.FirstOrDefaultAsync(x => x.DiscordUserId == discordUserId);
 
-            if(discordUser == null)
-            {
-                return null;
-            }
-
-            return _mapper.Map<DiscordUserDto>(discordUser);
+            return discordUser == null ? null : _mapper.Map<DiscordUserDto>(discordUser);
         }
 
         public async Task<DiscordUserDto> RetrieveAsync(long id)
         {
             var discordUser = await _couchContext.DiscordUsers.FirstOrDefaultAsync(x => x.Id == id);
 
+            return discordUser == null ? null : _mapper.Map<DiscordUserDto>(discordUser);
+        }
+
+        public async Task UpdateAsync(DiscordUserDto discordUserDto)
+        {
+            var discordUser = await _couchContext.DiscordUsers.FirstOrDefaultAsync(x => x.Id == discordUserDto.Id);
+
             if (discordUser == null)
             {
-                return null;
+                _logger.LogError("There was an issue retrieving a DiscordUser to update the allowance on, DiscordUser Id: {DiscordUserId}",
+                    discordUserDto.Id);
+                return;
             }
 
-            return _mapper.Map<DiscordUserDto>(discordUser);
+            discordUser.Allowance = discordUserDto.Allowance;
+            _couchContext.DiscordUsers.Update(discordUser);
+            await _couchContext.SaveChangesAsync();
         }
     }
 }
