@@ -1,6 +1,6 @@
 ﻿using CouchBotOSS.Shared.Models.Patreon;
 
-namespace MTD.CouchBot.Accessors.Contracts;
+namespace CouchBotOSS.Accessors.Contracts;
 
 public interface IPatreonAccessor
 {

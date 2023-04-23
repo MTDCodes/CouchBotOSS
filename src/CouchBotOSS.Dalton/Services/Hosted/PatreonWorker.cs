@@ -2,7 +2,6 @@ using CouchBotOSS.Accessors.Contracts;
 using CouchBotOSS.Dalton.Models;
 using CouchBotOSS.Shared.Enums;
 using Microsoft.Extensions.Options;
-using MTD.CouchBot.Accessors.Contracts;
 
 namespace CouchBotOSS.Dalton.Services.Hosted
 {

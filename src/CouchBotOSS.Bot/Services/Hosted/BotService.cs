@@ -1,6 +1,5 @@
 ﻿using CouchBotOSS.Bot.Services.Bot;
 using Discord.WebSocket;
-using MTD.CouchBot.Services;
 
 namespace CouchBotOSS.Bot.Services.Hosted
 {
@@ -13,11 +12,11 @@ namespace CouchBotOSS.Bot.Services.Hosted
         private readonly BotCommandService _commandService;
         private readonly ILogger<BotService> _logger;
 
-        public BotService(ILogger<BotService> logger, 
-            DiscordSocketClient discordSocketClient, 
-            GuildInteractionService guildInteractionService, 
-            MessageInteractionService messageInteractionService, 
-            StartupService startupService, 
+        public BotService(ILogger<BotService> logger,
+            DiscordSocketClient discordSocketClient,
+            GuildInteractionService guildInteractionService,
+            MessageInteractionService messageInteractionService,
+            StartupService startupService,
             BotCommandService commandService)
         {
             _logger = logger;

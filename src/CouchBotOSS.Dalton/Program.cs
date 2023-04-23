@@ -3,12 +3,10 @@ using CouchBotOSS.Accessors.Implementations;
 using CouchBotOSS.Dalton.Models;
 using CouchBotOSS.Dalton.Services.Hosted;
 using CouchBotOSS.Data.Models;
-using CouchBotOSS.Shared.Mapping;
+using CouchBotOSS.Shared.Mapper;
 using CouchBotOSS.Shared.Models.Bot;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using MTD.CouchBot.Accessors.Contracts;
-using MTD.CouchBot.Accessors.Implementations;
 
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((context, services) =>
