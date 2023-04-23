@@ -6,7 +6,6 @@ using CouchBotOSS.Data.Models;
 using CouchBotOSS.Shared.Mapper;
 using CouchBotOSS.Shared.Models.Bot;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((context, services) =>
