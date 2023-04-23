@@ -10,7 +10,7 @@ public class YouTubeAccessor : IYouTubeAccessor
 {
     private readonly TokenConfiguration _tokenConfiguration;
     private readonly List<(string name, string value)> _youtubeHeaders;
-    private const string BaseApiUrl = "{BaseApiUrl}";
+    private const string BaseApiUrl = "https://www.googleapis.com/youtube/v3";
 
     public YouTubeAccessor(IOptions<TokenConfiguration> botSettings)
     {
